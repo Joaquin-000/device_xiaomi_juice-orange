@@ -21,6 +21,7 @@ system_ext    	/system_ext     ext4    	ro,barrier=1,discard                wait
 /boot		emmc	/dev/block/bootdevice/by-name/boot
 /data		f2fs    /dev/block/bootdevice/by-name/userdata											flags=fileencryption=ice:aes-256-cts;wrappedkey;keydirectory=/metadata/vold/metadata_encryption;encryptable=footer
 /storage        ext4    /data/media/0														flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
+/splash emmc      /dev/block/bootdevice/by-name/splash               flags=display="Boot Logo";backup=1;flashimg=1
 
 # AVB partitions
 /dtbo		emmc	/dev/block/bootdevice/by-name/dtbo											flags=display="DTBO";backup=1;flashimg=1
