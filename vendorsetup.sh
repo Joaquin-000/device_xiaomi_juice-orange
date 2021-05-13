@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-FDEVICE="citrus"
+FDEVICE="juice"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep $FDEVICE)
@@ -34,7 +34,7 @@ fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
    	export TW_DEFAULT_LANGUAGE="en"
-	export TARGET_DEVICE_ALT="citrus"
+	export TARGET_DEVICE_ALT="citrus, lime, lemon, pomelo"
 	export LC_ALL="C"
 	export ALLOW_MISSING_DEPENDENCIES=true
 	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
